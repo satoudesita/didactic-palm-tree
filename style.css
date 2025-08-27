@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #f0f8ff;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+button {
+  font-size: 24px;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#today-result {
+  margin-top: 15px;
+  font-size: 28px;
+}
+
+#diary-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+#diary-list li {
+  margin: 5px 0;
+  font-size: 20px;
+}
