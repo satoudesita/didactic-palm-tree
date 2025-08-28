@@ -17,6 +17,7 @@
   <div class="tabs">
     <button class="tab-button active" data-tab="input-tab">入力</button>
     <button class="tab-button" data-tab="calendar-tab">カレンダー</button>
+    <button class="tab-button" data-tab="user-tab">ユーザー</button>
   </div>
 
   <!-- 入力タブ -->
@@ -29,12 +30,46 @@
       <button data-weather="⛈" class="weather-btn">⛈</button>
     </div>
     <div id="today-result"></div>
+    <!-- 日記入力欄追加 -->
+    <form id="diary-form" style="margin-top: 1em;">
+      <textarea id="diary-input" rows="3" placeholder="今日の日記を入力"></textarea>
+      <br>
+      <button type="submit">日記を保存</button>
+    </form>
+    <div id="today-diary" style="margin-top:0.5em;"></div>
   </div>
 
   <!-- カレンダータブ -->
   <div class="tab-content" id="calendar-tab" style="display:none">
     <h2>カレンダー</h2>
     <div id="calendar"></div>
+  </div>
+
+  <!-- ユーザータブ -->
+  <div class="tab-content" id="user-tab" style="display:none">
+    <h2>ユーザー情報</h2>
+    <div class="user-profile">
+      <img src="https://placehold.co/80x80" alt="ユーザーアイコン" class="user-icon" id="user-icon-img">
+      <div>
+        <p class="user-name">
+          ユーザーネーム: 
+          <span id="user-name-text">@my_weather</span>
+        </p>
+        <form id="username-form">
+          <input type="text" id="username-input" placeholder="新しいユーザーネーム" />
+          <button type="submit">変更</button>
+        </form>
+        <form id="icon-form" style="margin-top:10px;">
+          <label for="icon-input">アイコン画像URL:</label>
+          <input type="url" id="icon-input" placeholder="画像のURLを入力" />
+          <button type="submit">変更</button>
+        </form>
+        <form id="icon-file-form" style="margin-top:10px;">
+          <label for="icon-file-input">画像ファイルから選択:</label>
+          <input type="file" id="icon-file-input" accept="image/*" />
+        </form>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
