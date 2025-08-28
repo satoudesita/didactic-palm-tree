@@ -18,6 +18,7 @@
     <button class="tab-button active" data-tab="input-tab">入力</button>
     <button class="tab-button" data-tab="calendar-tab">カレンダー</button>
     <button class="tab-button" data-tab="user-tab">ユーザー</button>
+    <button class="tab-button" data-tab="simplemap-tab">日本地図</button> <!-- 追加 -->
   </div>
 
   <!-- 入力タブ -->
@@ -70,6 +71,72 @@
         </form>
       </div>
     </div>
+  </div>
+
+  <!-- シンプル日本地図タブ追加 -->
+  <div class="tab-content" id="simplemap-tab" style="display:none">
+    <h2>シンプルな日本地図</h2>
+    <div id="simple-japan-map" style="display: grid; grid-template-columns: repeat(12, 32px); gap: 2px; margin: 2em 0;">
+      <!-- 北海道 -->
+      <div style="grid-column: 9 / span 2; grid-row: 1 / span 2; background:#e0f7fa; text-align:center; border-radius:4px; font-size:1.2em;">北</div>
+      <!-- 東北 -->
+      <div style="grid-column: 9 / span 2; grid-row: 6; background:#b2ebf2; text-align:center; border-radius:4px;">青</div>
+      <div style="grid-column: 10; grid-row: 7; background:#b2ebf2; text-align:center; border-radius:4px;">岩</div>
+      <div style="grid-column: 9; grid-row: 7; background:#b2ebf2; text-align:center; border-radius:4px;">秋</div>
+      <div style="grid-column: 9; grid-row: 8; background:#b2ebf2; text-align:center; border-radius:4px;">山</div>
+      <div style="grid-column: 10; grid-row: 8; background:#b2ebf2; text-align:center; border-radius:4px;">宮</div>
+      <div style="grid-column: 9 / span 2; grid-row: 9; background:#b2ebf2; text-align:center; border-radius:4px;">福</div>
+      <!-- 関東 -->
+      <div style="grid-column: 10; grid-row: 10; background:#fff9c4; text-align:center; border-radius:4px;">茨</div>
+      <div style="grid-column: 9; grid-row: 10; background:#fff9c4; text-align:center; border-radius:4px;">栃</div>
+      <div style="grid-column: 8; grid-row: 9; background:#fff9c4; text-align:center; border-radius:4px;">群</div>
+      <div style="grid-column: 8; grid-row: 10; background:#fff9c4; text-align:center; border-radius:4px;">埼</div>
+      <div style="grid-column: 10; grid-row: 11; background:#fff9c4; text-align:center; border-radius:4px;">千</div>
+      <div style="grid-column: 18; grid-row: 11; background:#fff9c4; text-align:center; border-radius:4px;">東</div>
+      <div style="grid-column: 9; grid-row: 11; background:#fff9c4; text-align:center; border-radius:4px;">神</div>
+      <!-- 中部 -->
+      <div style="grid-column: 8; grid-row: 8; background:#ffe0b2; text-align:center; border-radius:4px;">新</div>
+      <div style="grid-column: 7; grid-row: 8; background:#ffe0b2; text-align:center; border-radius:4px;">富</div>
+      <div style="grid-column: 6; grid-row: 7; background:#ffe0b2; text-align:center; border-radius:4px;">石</div>
+      <div style="grid-column: 6; grid-row: 8; background:#ffe0b2; text-align:center; border-radius:4px;">福</div>
+      <div style="grid-column: 7; grid-row: 10; background:#ffe0b2; text-align:center; border-radius:4px;">山</div>
+      <div style="grid-column: 7; grid-row: 9; background:#ffe0b2; text-align:center; border-radius:4px;">長</div>
+      <div style="grid-column: 6; grid-row: 10; background:#ffe0b2; text-align:center; border-radius:4px;">岐</div>
+      <div style="grid-column: 7; grid-row: 11; background:#ffe0b2; text-align:center; border-radius:4px;">静</div>
+      <div style="grid-column: 6; grid-row: 11; background:#ffe0b2; text-align:center; border-radius:4px;">愛</div>
+      <div style="grid-column: 5; grid-row: 10; background:#ffe0b2; text-align:center; border-radius:4px;">三</div>
+      <!-- 近畿 -->
+      <div style="grid-column: 6; grid-row: 9; background:#c8e6c9; text-align:center; border-radius:4px;">滋</div>
+      <div style="grid-column: 5; grid-row: 8; background:#c8e6c9; text-align:center; border-radius:4px;">京</div>
+      <div style="grid-column: 4; grid-row: 10; background:#c8e6c9; text-align:center; border-radius:4px;">大</div>
+      <div style="grid-column: 4; grid-row: 9; background:#c8e6c9; text-align:center; border-radius:4px;">兵</div>
+      <div style="grid-column: 5; grid-row: 9; background:#c8e6c9; text-align:center; border-radius:4px;">奈</div>
+      <div style="grid-column: 5; grid-row: 11; background:#c8e6c9; text-align:center; border-radius:4px;">和</div>
+      <!-- 中国 -->
+      <div style="grid-column: 3; grid-row: 8; background:#d1c4e9; text-align:center; border-radius:4px;">鳥</div>
+      <div style="grid-column: 2; grid-row: 8; background:#d1c4e9; text-align:center; border-radius:4px;">島</div>
+      <div style="grid-column: 3; grid-row: 9; background:#d1c4e9; text-align:center; border-radius:4px;">岡</div>
+      <div style="grid-column: 2; grid-row: 9; background:#d1c4e9; text-align:center; border-radius:4px;">広</div>
+      <div style="grid-column: 1; grid-row: 10; background:#d1c4e9; text-align:center; border-radius:4px;">山</div>
+      <!-- 四国 -->
+      <div style="grid-column: 3; grid-row: 12; background:#ffe082; text-align:center; border-radius:4px;">徳</div>
+      <div style="grid-column: 3; grid-row: 11; background:#ffe082; text-align:center; border-radius:4px;">香</div>
+      <div style="grid-column: 2; grid-row: 11; background:#ffe082; text-align:center; border-radius:4px;">愛</div>
+      <div style="grid-column: 2; grid-row: 12; background:#ffe082; text-align:center; border-radius:4px;">高</div>
+      <!-- 九州 -->
+      <div style="grid-column: 3; grid-row: 15; background:#ffccbc; text-align:center; border-radius:4px;">福</div>
+      <div style="grid-column: 2; grid-row: 15; background:#ffccbc; text-align:center; border-radius:4px;">佐</div>
+      <div style="grid-column: 1; grid-row: 15; background:#ffccbc; text-align:center; border-radius:4px;">長</div>
+      <div style="grid-column: 2; grid-row: 16; background:#ffccbc; text-align:center; border-radius:4px;">熊</div>
+      <div style="grid-column: 3; grid-row: 16; background:#ffccbc; text-align:center; border-radius:4px;">大</div>
+      <div style="grid-column: 3; grid-row: 17; background:#ffccbc; text-align:center; border-radius:4px;">宮</div>
+      <div style="grid-column: 2; grid-row: 17; background:#ffccbc; text-align:center; border-radius:4px;">鹿</div>
+      <!-- 沖縄 -->
+      <div style="grid-column: 5; grid-row: 17; background:#b3e5fc; text-align:center; border-radius:4px;">沖</div>
+    </div>
+    <p style="font-size:0.9em;color:#888;">
+      ※これは非常にシンプルな日本地図のイメージです。実際の地理的配置や詳細な形状を反映していません。
+    </p>
   </div>
 
   <script src="script.js"></script>
