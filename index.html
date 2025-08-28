@@ -77,63 +77,64 @@
   <div class="tab-content" id="simplemap-tab" style="display:none">
     <h2>シンプルな日本地図</h2>
     <div id="simple-japan-map" style="display: grid; grid-template-columns: repeat(12, 32px); gap: 2px; margin: 2em 0;">
-      <!-- 北海道（面積4倍＝横2倍・縦2倍に拡大） -->
-      <div style="grid-column: 9 / span 3; grid-row: 1 / span 4; background:#e0f7fa; text-align:center; border-radius:4px; font-size:2.4em; display:flex; align-items:center; justify-content:center;">北</div>
+      <!-- 北海道 -->
+      <div data-pref="北海道" style="grid-column: 9 / span 3; grid-row: 1 / span 4; background:#e0f7fa; text-align:center; border-radius:4px; font-size:2.4em; display:flex; align-items:center; justify-content:center; cursor:pointer;">北</div>
       <!-- 東北 -->
-      <div style="grid-column: 9 / span 2; grid-row: 6; background:#b2ebf2; text-align:center; border-radius:4px;">青</div>
-      <div style="grid-column: 10; grid-row: 7; background:#b2ebf2; text-align:center; border-radius:4px;">岩</div>
-      <div style="grid-column: 9; grid-row: 7; background:#b2ebf2; text-align:center; border-radius:4px;">秋</div>
-      <div style="grid-column: 9; grid-row: 8; background:#b2ebf2; text-align:center; border-radius:4px;">山</div>
-      <div style="grid-column: 10; grid-row: 8; background:#b2ebf2; text-align:center; border-radius:4px;">宮</div>
-      <div style="grid-column: 9 / span 2; grid-row: 9; background:#b2ebf2; text-align:center; border-radius:4px;">福</div>
+      <div data-pref="青森県" style="grid-column: 9 / span 2; grid-row: 6; background:#b2ebf2; text-align:center; border-radius:4px; cursor:pointer;">青</div>
+      <div data-pref="岩手県" style="grid-column: 10; grid-row: 7; background:#b2ebf2; text-align:center; border-radius:4px; cursor:pointer;">岩</div>
+      <div data-pref="秋田県" style="grid-column: 9; grid-row: 7; background:#b2ebf2; text-align:center; border-radius:4px; cursor:pointer;">秋</div>
+      <div data-pref="山形県" style="grid-column: 9; grid-row: 8; background:#b2ebf2; text-align:center; border-radius:4px; cursor:pointer;">山</div>
+      <div data-pref="宮城県" style="grid-column: 10; grid-row: 8; background:#b2ebf2; text-align:center; border-radius:4px; cursor:pointer;">宮</div>
+      <div data-pref="福島県" style="grid-column: 9 / span 2; grid-row: 9; background:#b2ebf2; text-align:center; border-radius:4px; cursor:pointer;">福</div>
       <!-- 関東 -->
-      <div style="grid-column: 10; grid-row: 10; background:#fff9c4; text-align:center; border-radius:4px;">茨</div>
-      <div style="grid-column: 9; grid-row: 10; background:#fff9c4; text-align:center; border-radius:4px;">栃</div>
-      <div style="grid-column: 8; grid-row: 9; background:#fff9c4; text-align:center; border-radius:4px;">群</div>
-      <div style="grid-column: 8; grid-row: 10; background:#fff9c4; text-align:center; border-radius:4px;">埼</div>
-      <div style="grid-column: 10; grid-row: 11; background:#fff9c4; text-align:center; border-radius:4px;">千</div>
-      <div style="grid-column: 18; grid-row: 11; background:#fff9c4; text-align:center; border-radius:4px;">東</div>
-      <div style="grid-column: 9; grid-row: 11; background:#fff9c4; text-align:center; border-radius:4px;">神</div>
+      <div data-pref="茨城県" style="grid-column: 10; grid-row: 10; background:#fff9c4; text-align:center; border-radius:4px; cursor:pointer;">茨</div>
+      <div data-pref="栃木県" style="grid-column: 9; grid-row: 10; background:#fff9c4; text-align:center; border-radius:4px; cursor:pointer;">栃</div>
+      <div data-pref="群馬県" style="grid-column: 8; grid-row: 9; background:#fff9c4; text-align:center; border-radius:4px; cursor:pointer;">群</div>
+      <div data-pref="埼玉県" style="grid-column: 8; grid-row: 10; background:#fff9c4; text-align:center; border-radius:4px; cursor:pointer;">埼</div>
+      <div data-pref="千葉県" style="grid-column: 10; grid-row: 11; background:#fff9c4; text-align:center; border-radius:4px; cursor:pointer;">千</div>
+      <div data-pref="東京都" style="grid-column: 18; grid-row: 11; background:#fff9c4; text-align:center; border-radius:4px; cursor:pointer;">東</div>
+      <div data-pref="神奈川県" style="grid-column: 9; grid-row: 11; background:#fff9c4; text-align:center; border-radius:4px; cursor:pointer;">神</div>
       <!-- 中部 -->
-      <div style="grid-column: 8; grid-row: 8; background:#ffe0b2; text-align:center; border-radius:4px;">新</div>
-      <div style="grid-column: 7; grid-row: 8; background:#ffe0b2; text-align:center; border-radius:4px;">富</div>
-      <div style="grid-column: 6; grid-row: 7; background:#ffe0b2; text-align:center; border-radius:4px;">石</div>
-      <div style="grid-column: 6; grid-row: 8; background:#ffe0b2; text-align:center; border-radius:4px;">福</div>
-      <div style="grid-column: 7; grid-row: 10; background:#ffe0b2; text-align:center; border-radius:4px;">山</div>
-      <div style="grid-column: 7; grid-row: 9; background:#ffe0b2; text-align:center; border-radius:4px;">長</div>
-      <div style="grid-column: 6; grid-row: 10; background:#ffe0b2; text-align:center; border-radius:4px;">岐</div>
-      <div style="grid-column: 7; grid-row: 11; background:#ffe0b2; text-align:center; border-radius:4px;">静</div>
-      <div style="grid-column: 6; grid-row: 11; background:#ffe0b2; text-align:center; border-radius:4px;">愛</div>
-      <div style="grid-column: 5; grid-row: 10; background:#ffe0b2; text-align:center; border-radius:4px;">三</div>
+      <div data-pref="新潟県" style="grid-column: 8; grid-row: 8; background:#ffe0b2; text-align:center; border-radius:4px; cursor:pointer;">新</div>
+      <div data-pref="富山県" style="grid-column: 7; grid-row: 8; background:#ffe0b2; text-align:center; border-radius:4px; cursor:pointer;">富</div>
+      <div data-pref="石川県" style="grid-column: 6; grid-row: 7; background:#ffe0b2; text-align:center; border-radius:4px; cursor:pointer;">石</div>
+      <div data-pref="福井県" style="grid-column: 6; grid-row: 8; background:#ffe0b2; text-align:center; border-radius:4px; cursor:pointer;">福</div>
+      <div data-pref="山梨県" style="grid-column: 7; grid-row: 10; background:#ffe0b2; text-align:center; border-radius:4px; cursor:pointer;">山</div>
+      <div data-pref="長野県" style="grid-column: 7; grid-row: 9; background:#ffe0b2; text-align:center; border-radius:4px; cursor:pointer;">長</div>
+      <div data-pref="岐阜県" style="grid-column: 6; grid-row: 10; background:#ffe0b2; text-align:center; border-radius:4px; cursor:pointer;">岐</div>
+      <div data-pref="静岡県" style="grid-column: 7; grid-row: 11; background:#ffe0b2; text-align:center; border-radius:4px; cursor:pointer;">静</div>
+      <div data-pref="愛知県" style="grid-column: 6; grid-row: 11; background:#ffe0b2; text-align:center; border-radius:4px; cursor:pointer;">愛</div>
+      <div data-pref="三重県" style="grid-column: 5; grid-row: 10; background:#ffe0b2; text-align:center; border-radius:4px; cursor:pointer;">三</div>
       <!-- 近畿 -->
-      <div style="grid-column: 6; grid-row: 9; background:#c8e6c9; text-align:center; border-radius:4px;">滋</div>
-      <div style="grid-column: 5; grid-row: 8; background:#c8e6c9; text-align:center; border-radius:4px;">京</div>
-      <div style="grid-column: 4; grid-row: 10; background:#c8e6c9; text-align:center; border-radius:4px;">大</div>
-      <div style="grid-column: 4; grid-row: 9; background:#c8e6c9; text-align:center; border-radius:4px;">兵</div>
-      <div style="grid-column: 5; grid-row: 9; background:#c8e6c9; text-align:center; border-radius:4px;">奈</div>
-      <div style="grid-column: 5; grid-row: 11; background:#c8e6c9; text-align:center; border-radius:4px;">和</div>
+      <div data-pref="滋賀県" style="grid-column: 6; grid-row: 9; background:#c8e6c9; text-align:center; border-radius:4px; cursor:pointer;">滋</div>
+      <div data-pref="京都府" style="grid-column: 5; grid-row: 8; background:#c8e6c9; text-align:center; border-radius:4px; cursor:pointer;">京</div>
+      <div data-pref="大阪府" style="grid-column: 4; grid-row: 10; background:#c8e6c9; text-align:center; border-radius:4px; cursor:pointer;">大</div>
+      <div data-pref="兵庫県" style="grid-column: 4; grid-row: 9; background:#c8e6c9; text-align:center; border-radius:4px; cursor:pointer;">兵</div>
+      <div data-pref="奈良県" style="grid-column: 5; grid-row: 9; background:#c8e6c9; text-align:center; border-radius:4px; cursor:pointer;">奈</div>
+      <div data-pref="和歌山県" style="grid-column: 5; grid-row: 11; background:#c8e6c9; text-align:center; border-radius:4px; cursor:pointer;">和</div>
       <!-- 中国 -->
-      <div style="grid-column: 3; grid-row: 8; background:#d1c4e9; text-align:center; border-radius:4px;">鳥</div>
-      <div style="grid-column: 2; grid-row: 8; background:#d1c4e9; text-align:center; border-radius:4px;">島</div>
-      <div style="grid-column: 3; grid-row: 9; background:#d1c4e9; text-align:center; border-radius:4px;">岡</div>
-      <div style="grid-column: 2; grid-row: 9; background:#d1c4e9; text-align:center; border-radius:4px;">広</div>
-      <div style="grid-column: 1; grid-row: 10; background:#d1c4e9; text-align:center; border-radius:4px;">山</div>
+      <div data-pref="鳥取県" style="grid-column: 3; grid-row: 8; background:#d1c4e9; text-align:center; border-radius:4px; cursor:pointer;">鳥</div>
+      <div data-pref="島根県" style="grid-column: 2; grid-row: 8; background:#d1c4e9; text-align:center; border-radius:4px; cursor:pointer;">島</div>
+      <div data-pref="岡山県" style="grid-column: 3; grid-row: 9; background:#d1c4e9; text-align:center; border-radius:4px; cursor:pointer;">岡</div>
+      <div data-pref="広島県" style="grid-column: 2; grid-row: 9; background:#d1c4e9; text-align:center; border-radius:4px; cursor:pointer;">広</div>
+      <div data-pref="山口県" style="grid-column: 1; grid-row: 10; background:#d1c4e9; text-align:center; border-radius:4px; cursor:pointer;">山</div>
       <!-- 四国 -->
-      <div style="grid-column: 3; grid-row: 12; background:#ffe082; text-align:center; border-radius:4px;">徳</div>
-      <div style="grid-column: 3; grid-row: 11; background:#ffe082; text-align:center; border-radius:4px;">香</div>
-      <div style="grid-column: 2; grid-row: 11; background:#ffe082; text-align:center; border-radius:4px;">愛</div>
-      <div style="grid-column: 2; grid-row: 12; background:#ffe082; text-align:center; border-radius:4px;">高</div>
+      <div data-pref="徳島県" style="grid-column: 3; grid-row: 12; background:#ffe082; text-align:center; border-radius:4px; cursor:pointer;">徳</div>
+      <div data-pref="香川県" style="grid-column: 3; grid-row: 11; background:#ffe082; text-align:center; border-radius:4px; cursor:pointer;">香</div>
+      <div data-pref="愛媛県" style="grid-column: 2; grid-row: 11; background:#ffe082; text-align:center; border-radius:4px; cursor:pointer;">愛</div>
+      <div data-pref="高知県" style="grid-column: 2; grid-row: 12; background:#ffe082; text-align:center; border-radius:4px; cursor:pointer;">高</div>
       <!-- 九州 -->
-      <div style="grid-column: 3; grid-row: 15; background:#ffccbc; text-align:center; border-radius:4px;">福</div>
-      <div style="grid-column: 2; grid-row: 15; background:#ffccbc; text-align:center; border-radius:4px;">佐</div>
-      <div style="grid-column: 1; grid-row: 15; background:#ffccbc; text-align:center; border-radius:4px;">長</div>
-      <div style="grid-column: 2; grid-row: 16; background:#ffccbc; text-align:center; border-radius:4px;">熊</div>
-      <div style="grid-column: 3; grid-row: 16; background:#ffccbc; text-align:center; border-radius:4px;">大</div>
-      <div style="grid-column: 3; grid-row: 17; background:#ffccbc; text-align:center; border-radius:4px;">宮</div>
-      <div style="grid-column: 2; grid-row: 17; background:#ffccbc; text-align:center; border-radius:4px;">鹿</div>
+      <div data-pref="福岡県" style="grid-column: 3; grid-row: 15; background:#ffccbc; text-align:center; border-radius:4px; cursor:pointer;">福</div>
+      <div data-pref="佐賀県" style="grid-column: 2; grid-row: 15; background:#ffccbc; text-align:center; border-radius:4px; cursor:pointer;">佐</div>
+      <div data-pref="長崎県" style="grid-column: 1; grid-row: 15; background:#ffccbc; text-align:center; border-radius:4px; cursor:pointer;">長</div>
+      <div data-pref="熊本県" style="grid-column: 2; grid-row: 16; background:#ffccbc; text-align:center; border-radius:4px; cursor:pointer;">熊</div>
+      <div data-pref="大分県" style="grid-column: 3; grid-row: 16; background:#ffccbc; text-align:center; border-radius:4px; cursor:pointer;">大</div>
+      <div data-pref="宮崎県" style="grid-column: 3; grid-row: 17; background:#ffccbc; text-align:center; border-radius:4px; cursor:pointer;">宮</div>
+      <div data-pref="鹿児島県" style="grid-column: 2; grid-row: 17; background:#ffccbc; text-align:center; border-radius:4px; cursor:pointer;">鹿</div>
       <!-- 沖縄 -->
-      <div style="grid-column: 5; grid-row: 17; background:#b3e5fc; text-align:center; border-radius:4px;">沖</div>
+      <div data-pref="沖縄県" style="grid-column: 5; grid-row: 17; background:#b3e5fc; text-align:center; border-radius:4px; cursor:pointer;">沖</div>
     </div>
+    <div id="pref-name-output" style="margin-top:1em; font-size:1.2em; color:#1976d2;"></div>
     <p style="font-size:0.9em;color:#888;">
       ※これは非常にシンプルな日本地図のイメージです。実際の地理的配置や詳細な形状を反映していません。
     </p>

@@ -256,4 +256,19 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById(btn.dataset.tab).style.display = '';
     });
   });
+
+  // シンプル日本地図クリック時に正式名称を表示
+  const map = document.getElementById('simple-japan-map');
+  if (map) {
+    map.addEventListener('click', (e) => {
+      const target = e.target.closest('[data-pref]');
+      if (target) {
+        const name = target.getAttribute('data-pref');
+        const output = document.getElementById('pref-name-output');
+        if (output) {
+          output.textContent = `選択した都道府県：${name}`;
+        }
+      }
+    });
+  }
 });
