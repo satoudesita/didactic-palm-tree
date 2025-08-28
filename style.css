@@ -1,110 +1,229 @@
 body {
-  background: #fafafa;
   font-family: 'Segoe UI', 'Hiragino Sans', Arial, sans-serif;
+  background: #fafafa;
   margin: 0;
-  padding: 0;
+  color: #222;
 }
 
+/* ヘッダー */
 .insta-header {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 24px 16px 8px 16px;
+  padding: 1.2em 2em 1.2em 1.2em;
   background: #fff;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e6e6e6;
+  box-shadow: 0 2px 8px 0 #0001;
 }
-
 .profile-img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   border: 2px solid #e1306c;
+  margin-right: 1em;
   object-fit: cover;
 }
-
+.insta-header h1 {
+  margin: 0 0 0.2em 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
 .username {
-  color: #888;
-  font-size: 0.9em;
-  margin: 0;
+  color: #999;
+  font-size: 1em;
 }
 
+/* タブ */
 .tabs {
   display: flex;
-  justify-content: center;
   background: #fff;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 24px;
+  border-bottom: 1px solid #e6e6e6;
 }
-
 .tab-button {
   flex: 1;
-  padding: 12px 0;
+  padding: 1em 0;
   background: none;
   border: none;
   font-size: 1.1em;
+  font-weight: 600;
   color: #888;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
 }
-
 .tab-button.active {
   color: #e1306c;
-  border-bottom: 2px solid #e1306c;
-  font-weight: bold;
+  border-bottom: 2.5px solid #e1306c;
+  background: #fafafa;
 }
 
+/* タブコンテンツ */
 .tab-content {
-  max-width: 400px;
-  margin: 32px auto 0 auto;
+  max-width: 420px;
+  margin: 2em auto 0 auto;
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px #0001;
-  padding: 32px 24px;
-  text-align: center;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 #0001;
+  padding: 2em 1.5em 2em 1.5em;
 }
 
+/* 天気ボタン */
 .weather-buttons {
   display: flex;
+  gap: 1em;
+  margin: 1em 0;
   justify-content: center;
-  gap: 24px;
-  margin: 24px 0;
 }
-
 .weather-btn {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: none;
   font-size: 2em;
-  background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
-  color: #fff;
-  box-shadow: 0 2px 8px #e1306c33;
+  background: #fff;
+  border: 2px solid #e6e6e6;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
   cursor: pointer;
-  transition: transform 0.1s, box-shadow 0.1s;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.weather-btn:hover {
+  border: 2px solid #e1306c;
+  box-shadow: 0 2px 8px #e1306c22;
 }
 
-.weather-btn:active {
-  transform: scale(0.95);
-  box-shadow: 0 1px 4px #e1306c22;
+/* 日記入力 */
+#diary-form textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+  padding: 0.7em;
+  font-size: 1em;
+  resize: vertical;
+  background: #fafafa;
+}
+#diary-form button {
+  margin-top: 0.5em;
+  background: #e1306c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+#diary-form button:hover {
+  background: #c2185b;
+}
+#today-diary {
+  color: #444;
+  margin-top: 0.5em;
+  font-size: 1.05em;
 }
 
-#today-result {
-  margin-top: 16px;
-  font-size: 1.2em;
-  color: #e1306c;
-}
-
+/* カレンダー */
 #calendar {
-  margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+.day {
+  background: #fff;
+  border: 1.5px solid #e6e6e6;
+  border-radius: 12px;
+  min-height: 48px;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px #0001;
+}
+.day:hover {
+  border: 2px solid #e1306c;
+  box-shadow: 0 2px 8px #e1306c22;
 }
 
-#calendar > div {
+/* 選択した日の日記表示 */
+#selected-diary {
+  margin-top: 1.5em;
+  background: #fdf6fa;
+  border: 1.5px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 1em;
+  font-size: 1.1em;
+  color: #333;
+  box-shadow: 0 1px 8px #e1306c11;
+}
+
+/* ユーザー情報 */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+.user-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2.5px solid #e1306c;
+  object-fit: cover;
   background: #fafafa;
+}
+.user-name {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+}
+#username-form input,
+#icon-form input,
+#icon-file-input {
+  border: 1px solid #e6e6e6;
   border-radius: 8px;
-  padding: 12px 0;
-  font-size: 1.2em;
-  box-shadow: 0 1px 2px #0001;
+  padding: 0.4em 0.8em;
+  font-size: 1em;
+  margin-right: 0.5em;
+  background: #fafafa;
+}
+#username-form button,
+#icon-form button {
+  background: #e1306c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+#username-form button:hover,
+#icon-form button:hover {
+  background: #c2185b;
+}
+label {
+  color: #888;
+  font-size: 0.97em;
+  margin-right: 0.3em;
+}
+
+/* レスポンシブ */
+@media (max-width: 600px) {
+  .tab-content {
+    max-width: 98vw;
+    padding: 1em 0.5em 2em 0.5em;
+  }
+  .insta-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 0.5em;
+  }
+  .profile-img {
+    margin-bottom: 0.5em;
+  }
+  #calendar {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.2em;
+  }
 }
