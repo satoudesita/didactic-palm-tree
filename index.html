@@ -6,7 +6,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🌤 メンタル天気日記</h1>
+  <header class="insta-header">
+    <img src="https://placehold.co/60x60" alt="プロフィール画像" class="profile-img">
+    <div>
+      <h1>🌤 メンタル天気日記</h1>
+      <p class="username">@my_weather</p>
+    </div>
+  </header>
 
   <div class="tabs">
     <button class="tab-button active" data-tab="input-tab">入力</button>
@@ -16,11 +22,11 @@
   <!-- 入力タブ -->
   <div class="tab-content" id="input-tab">
     <p>今日の気分を天気マークで記録しよう</p>
-    <div id="weather-buttons">
-      <button data-weather="☀️">晴れ</button>
-      <button data-weather="⛅">曇り</button>
-      <button data-weather="🌧">雨</button>
-      <button data-weather="⛈">嵐</button>
+    <div id="weather-buttons" class="weather-buttons">
+      <button data-weather="☀️" class="weather-btn">☀️</button>
+      <button data-weather="⛅" class="weather-btn">⛅</button>
+      <button data-weather="🌧" class="weather-btn">🌧</button>
+      <button data-weather="⛈" class="weather-btn">⛈</button>
     </div>
     <div id="today-result"></div>
   </div>

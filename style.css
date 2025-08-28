@@ -1,55 +1,110 @@
 body {
-  font-family: sans-serif;
-  text-align: center;
-  background: #f0f8ff;
-  padding: 20px;
+  background: #fafafa;
+  font-family: 'Segoe UI', 'Hiragino Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  color: #333;
+.insta-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 16px 8px 16px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #e1306c;
+  object-fit: cover;
+}
+
+.username {
+  color: #888;
+  font-size: 0.9em;
+  margin: 0;
 }
 
 .tabs {
-  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 24px;
 }
 
 .tab-button {
-  padding: 10px 15px;
-  margin: 0 5px;
+  flex: 1;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  font-size: 1.1em;
+  color: #888;
   cursor: pointer;
-  font-size: 16px;
+  transition: color 0.2s;
 }
 
 .tab-button.active {
-  background-color: #add8e6;
-  border-radius: 5px;
+  color: #e1306c;
+  border-bottom: 2px solid #e1306c;
+  font-weight: bold;
 }
 
-button[data-weather] {
-  font-size: 24px;
-  padding: 10px 15px;
-  margin: 5px;
+.tab-content {
+  max-width: 400px;
+  margin: 32px auto 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.weather-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.weather-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  font-size: 2em;
+  background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px #e1306c33;
   cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.weather-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 1px 4px #e1306c22;
 }
 
 #today-result {
-  margin-top: 15px;
-  font-size: 28px;
+  margin-top: 16px;
+  font-size: 1.2em;
+  color: #e1306c;
 }
 
 #calendar {
+  margin-top: 16px;
   display: grid;
-  grid-template-columns: repeat(7, 40px);
-  grid-gap: 5px;
-  justify-content: center;
-  margin-top: 20px;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
 }
 
-.day {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 20px;
+#calendar > div {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.2em;
+  box-shadow: 0 1px 2px #0001;
 }
