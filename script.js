@@ -82,10 +82,41 @@ function renderCalendar() {
 
   const daysInMonth = new Date(year, month + 1, 0).getDate();
 
+  // カレンダーをグリッド表示
+  calendar.style.display = "grid";
+  calendar.style.gridTemplateColumns = "repeat(7, 1fr)";
+  calendar.style.gap = "4px";
+
+  // 曜日ヘッダー
+  const weekDays = ['日','月','火','水','木','金','土'];
+  weekDays.forEach(d => {
+    const wd = document.createElement("div");
+    wd.textContent = d;
+    wd.style.fontWeight = "bold";
+    wd.style.textAlign = "center";
+    calendar.appendChild(wd);
+  });
+
+  // 月初の曜日
+  const firstDay = new Date(year, month, 1).getDay();
+  for (let i = 0; i < firstDay; i++) {
+    const empty = document.createElement("div");
+    calendar.appendChild(empty);
+  }
+
   for (let day = 1; day <= daysInMonth; day++) {
     const dateStr = `${year}-${month + 1}-${day}`;
     const div = document.createElement("div");
     div.className = "day";
+    div.style.border = "1px solid #ccc";
+    div.style.borderRadius = "6px";
+    div.style.padding = "6px";
+    div.style.minHeight = "48px";
+    div.style.textAlign = "center";
+    div.style.background = "#fff";
+    div.style.cursor = "pointer";
+    div.style.position = "relative";
+
     let weather = "";
     let hasDiary = false;
     if (diary[dateStr]) {
@@ -96,7 +127,18 @@ function renderCalendar() {
         weather = diary[dateStr];
       }
     }
-    div.textContent = weather;
+
+    // 天気がある場合はアイコンのみ、なければ数字のみ
+    if (weather) {
+      div.innerHTML = `
+        <div style="font-size:1.5em;line-height:2.5">${weather}</div>
+      `;
+    } else {
+      div.innerHTML = `
+        <div style="font-size:0.9em;color:#888;line-height:2.5">${day}</div>
+      `;
+    }
+
     if (hasDiary) {
       div.title = `${dateStr}\n${diary[dateStr].text}`;
       div.style.border = "2px solid #4caf50";
@@ -191,4 +233,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 天気ボタンのクリック処理
+  const weatherButtons = document.querySelectorAll('.weather-btn');
+  const todayResult = document.getElementById('today-result');
+
+  weatherButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const weather = btn.getAttribute('data-weather');
+      saveToday(weather); // ← ここで保存処理を呼ぶ
+    });
+  });
+
+  // タブ切り替え処理（未実装の場合）
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      tabContents.forEach(tc => tc.style.display = 'none');
+      document.getElementById(btn.dataset.tab).style.display = '';
+    });
+  });
 });
